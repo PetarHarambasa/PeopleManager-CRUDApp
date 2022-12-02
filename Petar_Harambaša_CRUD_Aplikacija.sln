@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDAplikacija", "CRUDAplikacija\CRUDAplikacija.csproj", "{4DD5A71E-6D55-4C63-AC9D-2BF459A5CA8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DD5A71E-6D55-4C63-AC9D-2BF459A5CA8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD5A71E-6D55-4C63-AC9D-2BF459A5CA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD5A71E-6D55-4C63-AC9D-2BF459A5CA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD5A71E-6D55-4C63-AC9D-2BF459A5CA8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53FF3882-C990-48BF-A1EC-49E8C4F3F316}
+	EndGlobalSection
+EndGlobal

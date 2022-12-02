@@ -1,0 +1,15 @@
+﻿<Application x:Class="CRUDAplikacija.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CRUDAplikacija"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ImageBrush x:Key="OrangeGradientBackground" ImageSource="/Assets/orangeGradient.jpg" />
+        <ImageBrush x:Key="DarkBlueBackground" ImageSource="/Assets/darkBlue.jpg" />
+        <ImageBrush x:Key="RainbowBackground" ImageSource="/Assets/rainbow.jpg" />
+        <ImageBrush x:Key="BlueGradient" ImageSource="/Assets/blueGradient.jpg" />
+        <ImageBrush x:Key="90s" ImageSource="/Assets/90s.jpg" />
+        <ImageBrush x:Key="BlackDark" ImageSource="/Assets/blackDark.png" />
+    </Application.Resources>
+</Application>

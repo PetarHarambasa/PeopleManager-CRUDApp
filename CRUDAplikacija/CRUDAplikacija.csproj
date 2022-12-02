@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DD5A71E-6D55-4C63-AC9D-2BF459A5CA8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CRUDAplikacija</RootNamespace>
+    <AssemblyName>CRUDAplikacija</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Dal\IRepository.cs" />
+    <Compile Include="Dal\RepositoryFactory.cs" />
+    <Compile Include="Dal\SqlRepository.cs" />
+    <Compile Include="EditStudentPage.xaml.cs">
+      <DependentUpon>EditStudentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditStudentSubjectPage.xaml.cs">
+      <DependentUpon>EditStudentSubjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditSubjectPage.xaml.cs">
+      <DependentUpon>EditSubjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditTeacherPage.xaml.cs">
+      <DependentUpon>EditTeacherPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditTeacherStudentPage.xaml.cs">
+      <DependentUpon>EditTeacherStudentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditTeacherSubjectPage.xaml.cs">
+      <DependentUpon>EditTeacherSubjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListStudentSubjectPage.xaml.cs">
+      <DependentUpon>ListStudentSubjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListSubjectPage.xaml.cs">
+      <DependentUpon>ListSubjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListTeacherPage.xaml.cs">
+      <DependentUpon>ListTeacherPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListTeacherStudentPage.xaml.cs">
+      <DependentUpon>ListTeacherStudentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListTeacherSubjectPage.xaml.cs">
+      <DependentUpon>ListTeacherSubjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentSubject.cs" />
+    <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Teacher.cs" />
+    <Compile Include="Models\TeacherStudent.cs" />
+    <Compile Include="Models\TeacherSubject.cs" />
+    <Compile Include="Utils\ImageUtils.cs" />
+    <Compile Include="Utils\ValidationUtils.cs" />
+    <Compile Include="ViewModel\StudentSubjectViewModel.cs" />
+    <Compile Include="ViewModel\StudentViewModel.cs" />
+    <Compile Include="ViewModel\SubjectViewModel.cs" />
+    <Compile Include="ViewModel\TeacherStudentViewModel.cs" />
+    <Compile Include="ViewModel\TeacherSubjectViewModel.cs" />
+    <Compile Include="ViewModel\TeacherViewModel.cs" />
+    <Page Include="EditStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditStudentSubjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditSubjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditTeacherPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditTeacherStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditTeacherSubjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListStudentSubjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListSubjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListTeacherPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListTeacherStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListTeacherSubjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FramedPage.cs" />
+    <Compile Include="ListStudentPage.xaml.cs">
+      <DependentUpon>ListStudentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\orangeGradient.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\rainbow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\blueGradient.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\darkBlue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\90s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\blackDark.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
